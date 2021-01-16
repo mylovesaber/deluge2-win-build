@@ -27,3 +27,4 @@ rem del Win64OpenSSL-%var%.exe
 
 rem Restore the original PATH so that it does not keep growing on many runs
 set PATH=%OLDPATH%
+pause
