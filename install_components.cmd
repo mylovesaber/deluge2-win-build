@@ -41,3 +41,4 @@ rd /s /q nsprocess
 rd /s /q nsprocess
 
 call lib/createlinks.cmd
+pause
