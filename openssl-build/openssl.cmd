@@ -17,6 +17,7 @@ rem Install it on this machine
 Win64OpenSSL-%var%.exe /dir="C:\OpenSSL-Win64" /verysilent
 
 rem Fish out the necessary DDLs from it and add them to our build overlay and the already built deluge folders (if any)
+md C:\deluge2\overlay\Lib\site-packages
 copy /y C:\OpenSSL-Win64\*.dll C:\deluge2\overlay\Lib\site-packages
 for /f %%i in ('dir /b C:\deluge2\deluge-2* ^| findstr /v dev') do copy /y C:\OpenSSL-Win64\*.dll C:\deluge2\%%i\Lib\site-packages
 for /f %%i in ('dir /b C:\deluge2\deluge-2* ^| findstr dev') do copy /y C:\OpenSSL-Win64\*.dll C:\deluge2\%%i\Lib\site-packages
