@@ -1,7 +1,7 @@
 diff -urN a/gvsbuild/projects.py b/gvsbuild/projects.py
 --- a/gvsbuild/projects.py	2020-04-20 18:10:24.526745700 +0200
 +++ b/gvsbuild/projects.py	2020-04-29 14:55:19.453130500 +0200
-@@ -820,7 +820,7 @@
+@@ -853,7 +853,7 @@
          self.exec_cmd(r'%(gtk_dir)s\bin\gtk-update-icon-cache.exe --ignore-theme-index --force "%(gtk_dir)s\share\icons\hicolor"')
  
  @project_add
@@ -10,12 +10,12 @@ diff -urN a/gvsbuild/projects.py b/gvsbuild/projects.py
      def __init__(self):
          if self.opts.gtk3_ver != '3.24':
              self.ignore()
-@@ -829,11 +829,13 @@
+@@ -861,11 +861,13 @@
          Project.__init__(self,
              'gtk3',
              prj_dir='gtk3-24',
--            archive_url = 'http://ftp.acc.umu.se/pub/GNOME/sources/gtk+/3.24/gtk+-3.24.17.tar.xz',
--            hash = 'f210255b221cb0f0db3e7b21399983b715c9dda6eb1e5c2f7fdf38f4f1b6bac0',
+-            archive_url = 'http://ftp.acc.umu.se/pub/GNOME/sources/gtk+/3.24/gtk+-3.24.24.tar.xz',
+-            hash = 'cc9d4367c55b724832f6b09ab85481738ea456871f0381768a6a99335a98378a',
 +            repo_url = 'https://gitlab.gnome.org/GNOME/gtk.git',
 +            fetch_submodules = False,
 +            tag = 'gtk-3-24',
